@@ -36,6 +36,11 @@ public class ViewCsv extends javax.swing.JFrame {
         jtf_email = new javax.swing.JTextField();
         jb_nuevo = new javax.swing.JButton();
         jb_guardar = new javax.swing.JButton();
+        jp_botones_movimiento = new javax.swing.JPanel();
+        jb_primero = new javax.swing.JButton();
+        jb_anterior = new javax.swing.JButton();
+        jb_siguiente = new javax.swing.JButton();
+        jb_siguiente1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -79,19 +84,73 @@ public class ViewCsv extends javax.swing.JFrame {
         jl_email.setForeground(new java.awt.Color(255, 0, 102));
         jl_email.setText("Email:");
 
-        jb_nuevo.setBackground(new java.awt.Color(255, 153, 255));
-        jb_nuevo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jb_nuevo.setBackground(new java.awt.Color(153, 0, 102));
+        jb_nuevo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jb_nuevo.setForeground(new java.awt.Color(255, 255, 255));
         jb_nuevo.setText("Nuevo");
 
-        jb_guardar.setBackground(new java.awt.Color(255, 153, 255));
-        jb_guardar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jb_guardar.setBackground(new java.awt.Color(153, 0, 102));
+        jb_guardar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jb_guardar.setForeground(new java.awt.Color(255, 255, 255));
         jb_guardar.setText("Guardar");
+
+        jb_primero.setBackground(new java.awt.Color(153, 0, 102));
+        jb_primero.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jb_primero.setForeground(new java.awt.Color(255, 255, 255));
+        jb_primero.setText("l<");
+
+        jb_anterior.setBackground(new java.awt.Color(153, 0, 102));
+        jb_anterior.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jb_anterior.setForeground(new java.awt.Color(255, 255, 255));
+        jb_anterior.setText("<<");
+
+        jb_siguiente.setBackground(new java.awt.Color(153, 0, 102));
+        jb_siguiente.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jb_siguiente.setForeground(new java.awt.Color(255, 255, 255));
+        jb_siguiente.setText(">>");
+
+        jb_siguiente1.setBackground(new java.awt.Color(153, 0, 102));
+        jb_siguiente1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jb_siguiente1.setForeground(new java.awt.Color(255, 255, 255));
+        jb_siguiente1.setText(">>");
+
+        javax.swing.GroupLayout jp_botones_movimientoLayout = new javax.swing.GroupLayout(jp_botones_movimiento);
+        jp_botones_movimiento.setLayout(jp_botones_movimientoLayout);
+        jp_botones_movimientoLayout.setHorizontalGroup(
+            jp_botones_movimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jp_botones_movimientoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jb_primero)
+                .addGap(18, 18, 18)
+                .addComponent(jb_anterior)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addComponent(jb_siguiente)
+                .addGap(18, 18, 18)
+                .addComponent(jb_siguiente1)
+                .addContainerGap())
+        );
+        jp_botones_movimientoLayout.setVerticalGroup(
+            jp_botones_movimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jp_botones_movimientoLayout.createSequentialGroup()
+                .addGroup(jp_botones_movimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jb_anterior, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jb_siguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jb_primero, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jb_siguiente1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 22, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jp_encabezado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(160, 160, 160)
+                .addComponent(jb_nuevo)
+                .addGap(51, 51, 51)
+                .addComponent(jb_guardar)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(48, 48, 48)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -100,15 +159,13 @@ public class ViewCsv extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(jp_botones_movimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(100, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jtf_nombre)
                             .addComponent(jtf_email))
-                        .addGap(97, 97, 97))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jb_nuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(48, 48, 48)
-                        .addComponent(jb_guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(110, Short.MAX_VALUE))))
+                        .addGap(97, 97, 97))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -117,16 +174,18 @@ public class ViewCsv extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jl_nombre)
-                    .addComponent(jtf_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtf_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jl_email)
-                    .addComponent(jtf_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtf_email, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jl_email))
                 .addGap(30, 30, 30)
+                .addComponent(jp_botones_movimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jb_nuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jb_guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 32, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         pack();
@@ -168,12 +227,17 @@ public class ViewCsv extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jb_anterior;
     public javax.swing.JButton jb_guardar;
     public javax.swing.JButton jb_nuevo;
+    private javax.swing.JButton jb_primero;
+    private javax.swing.JButton jb_siguiente;
+    private javax.swing.JButton jb_siguiente1;
     public javax.swing.JLabel jl_email;
     public javax.swing.JLabel jl_instrucciones;
     public javax.swing.JLabel jl_nombre;
     public javax.swing.JLabel jl_titulo;
+    private javax.swing.JPanel jp_botones_movimiento;
     public javax.swing.JPanel jp_encabezado;
     public javax.swing.JTextField jtf_email;
     public javax.swing.JTextField jtf_nombre;
