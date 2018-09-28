@@ -40,7 +40,7 @@ public class ViewCsv extends javax.swing.JFrame {
         jb_primero = new javax.swing.JButton();
         jb_anterior = new javax.swing.JButton();
         jb_siguiente = new javax.swing.JButton();
-        jb_siguiente1 = new javax.swing.JButton();
+        jb_ultimo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -109,10 +109,10 @@ public class ViewCsv extends javax.swing.JFrame {
         jb_siguiente.setForeground(new java.awt.Color(255, 255, 255));
         jb_siguiente.setText(">>");
 
-        jb_siguiente1.setBackground(new java.awt.Color(153, 0, 102));
-        jb_siguiente1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jb_siguiente1.setForeground(new java.awt.Color(255, 255, 255));
-        jb_siguiente1.setText(">>");
+        jb_ultimo.setBackground(new java.awt.Color(153, 0, 102));
+        jb_ultimo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jb_ultimo.setForeground(new java.awt.Color(255, 255, 255));
+        jb_ultimo.setText(">>");
 
         javax.swing.GroupLayout jp_botones_movimientoLayout = new javax.swing.GroupLayout(jp_botones_movimiento);
         jp_botones_movimiento.setLayout(jp_botones_movimientoLayout);
@@ -126,7 +126,7 @@ public class ViewCsv extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                 .addComponent(jb_siguiente)
                 .addGap(18, 18, 18)
-                .addComponent(jb_siguiente1)
+                .addComponent(jb_ultimo)
                 .addContainerGap())
         );
         jp_botones_movimientoLayout.setVerticalGroup(
@@ -136,7 +136,7 @@ public class ViewCsv extends javax.swing.JFrame {
                     .addComponent(jb_anterior, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jb_siguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jb_primero, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jb_siguiente1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jb_ultimo, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 22, Short.MAX_VALUE))
         );
 
@@ -227,12 +227,12 @@ public class ViewCsv extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jb_anterior;
+    public javax.swing.JButton jb_anterior;
     public javax.swing.JButton jb_guardar;
     public javax.swing.JButton jb_nuevo;
-    private javax.swing.JButton jb_primero;
-    private javax.swing.JButton jb_siguiente;
-    private javax.swing.JButton jb_siguiente1;
+    public javax.swing.JButton jb_primero;
+    public javax.swing.JButton jb_siguiente;
+    public javax.swing.JButton jb_ultimo;
     public javax.swing.JLabel jl_email;
     public javax.swing.JLabel jl_instrucciones;
     public javax.swing.JLabel jl_nombre;
