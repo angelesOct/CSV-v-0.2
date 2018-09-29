@@ -55,8 +55,7 @@ public class ControllerCsv {
         this.viewCsv.jb_anterior.addActionListener(al);
         this.viewCsv.jb_ultimo.addActionListener(al);
         this.primero(modelCsv.getPath()); //mostrara el primer registro al iniiar la aplicacion 
-    }
-    
+    }    
     /**
      *-----Metodos para cada boton, y este tenga su respectiva funcion-----
      */
@@ -133,9 +132,7 @@ public class ControllerCsv {
         viewCsv.jtf_nombre.setText(modelCsv.getLimpiar_cajas());
         viewCsv.jtf_email.setText(modelCsv.getLimpiar_cajas());
         return null;
-    }
-    
-    
+    }   
 //----------Metodos para los botones de movimientos agregados a la version 2 de la aplicacion--------
     /**
      * va ha mostrar en cada caja de texto el primer dato dentro del archivo
@@ -164,6 +161,11 @@ public class ControllerCsv {
         } 
         return null;    
     }
+     /**
+     * va ha mostrar en cada caja de texto el siguiente dato dentro del archivo
+     * @param path
+     * @return 
+     */
     public String siguiente(String path){
         try{  
             String acumula_lineas =""; //acomulara cada linea para 
@@ -194,6 +196,11 @@ public class ControllerCsv {
         } 
         return null;    
     }
+    /**
+     * va ha mostrar en cada caja de texto el anterior dato dentro del archivo
+     * @param path
+     * @return 
+     */
     public String anterior(String path){
         try{  
             String acumula_lineas =""; //acomulara cada linea para 
@@ -224,6 +231,11 @@ public class ControllerCsv {
         }        
         return null;    
     }
+    /**
+     * va ha mostrar en cada caja de texto el ultimo dato dentro del archivo
+     * @param path
+     * @return 
+     */
     public String ultimo(String path){
         try{  
             String acumula_lineas =""; //acomulara cada linea para 
