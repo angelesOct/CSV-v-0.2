@@ -111,7 +111,7 @@ public class ControllerCsv {
             FileWriter fileWriter = new FileWriter(file,true);
             modelCsv.setNombre(viewCsv.jtf_nombre.getText()); // se agrega el contenido de la caja de texto a las variables
             modelCsv.setEmail(viewCsv.jtf_email.getText());
-            modelCsv.setGuardar(modelCsv.getNombre() + ";" + modelCsv.getEmail());
+            modelCsv.setGuardar(modelCsv.getNombre() + "," + modelCsv.getEmail());
             try(PrintWriter printWriter = new PrintWriter(fileWriter)){               
                 printWriter.println(modelCsv.getGuardar()); //se guarda cada campo agregado
                 printWriter.close();  
@@ -150,7 +150,7 @@ public class ControllerCsv {
                     }
                     String datos[] =  acumula_lineas.split("¬");//la sepacion de cada linea sera el simbolo (¬)
                     modelCsv.setPosicion(0);
-                    String registro[] = datos[modelCsv.getPosicion()].split(";");
+                    String registro[] = datos[modelCsv.getPosicion()].split(",");
                     viewCsv.jtf_nombre.setText(registro[0]);
                     viewCsv.jtf_email.setText(registro[1]); // posicion de los registros que seran mostrados              
             } catch(FileNotFoundException err){
@@ -180,7 +180,7 @@ public class ControllerCsv {
                     String datos[] =  acumula_lineas.split("¬");//la sepacion de cada linea sera el simbolo (¬)  
                     modelCsv.setPosicion(modelCsv.getPosicion()+1); //va al siguiente valor
                     if (modelCsv.getPosicion() < contador){
-                        String registro[] = datos[modelCsv.getPosicion()].split(";"); // ira a los siguientes datos antes del ultimo
+                        String registro[] = datos[modelCsv.getPosicion()].split(","); // ira a los siguientes datos antes del ultimo
                         viewCsv.jtf_nombre.setText(registro[0]);
                         viewCsv.jtf_email.setText(registro[1]); // posicion de los registros que seran mostrados 
                     }  
@@ -215,7 +215,7 @@ public class ControllerCsv {
                     String datos[] =  acumula_lineas.split("¬");//la sepacion de cada linea sera el simbolo (¬)  
                     modelCsv.setPosicion(modelCsv.getPosicion()-1); //va al siguiente valor
                     if (modelCsv.getPosicion()>=0){
-                        String registro[] = datos[modelCsv.getPosicion()].split(";"); // ira a los siguientes datos antes del ultimo
+                        String registro[] = datos[modelCsv.getPosicion()].split(","); // ira a los siguientes datos antes del ultimo
                         viewCsv.jtf_nombre.setText(registro[0]);
                         viewCsv.jtf_email.setText(registro[1]); // posicion de los registros que seran mostrados 
                     }  
@@ -249,7 +249,7 @@ public class ControllerCsv {
                     }
                     String datos[] =  acumula_lineas.split("¬");//la sepacion de cada linea sera el simbolo (¬)
                     modelCsv.setPosicion(contador-1);
-                    String registro[] = datos[modelCsv.getPosicion()].split(";");
+                    String registro[] = datos[modelCsv.getPosicion()].split(",");
                     viewCsv.jtf_nombre.setText(registro[0]);
                     viewCsv.jtf_email.setText(registro[1]); // posicion de los registros que seran mostrados              
             } catch(FileNotFoundException err){
