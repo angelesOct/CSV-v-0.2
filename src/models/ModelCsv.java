@@ -16,7 +16,14 @@ public class ModelCsv {
   private String email="";
   private String guardar;
   private int posicion = 0;
-  
+
+    public int getPosicion() {
+        return posicion;
+    }
+
+    public void setPosicion(int posicion) {
+        this.posicion = posicion;
+    }
 
     public String getLimpiar_cajas() {
         return limpiar_cajas;
