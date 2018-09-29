@@ -15,6 +15,8 @@ public class ModelCsv {
   private String nombre="";
   private String email="";
   private String guardar;
+  private int posicion = 0;
+  
 
     public String getLimpiar_cajas() {
         return limpiar_cajas;
